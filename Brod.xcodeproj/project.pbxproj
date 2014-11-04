@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46CF040F1A098476006523C7 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04071A098476006523C7 /* Action.swift */; };
+		46CF04101A098476006523C7 /* Bake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04081A098476006523C7 /* Bake.swift */; };
+		46CF04111A098476006523C7 /* Fold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04091A098476006523C7 /* Fold.swift */; };
+		46CF04121A098476006523C7 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF040A1A098476006523C7 /* Ingredient.swift */; };
+		46CF04131A098476006523C7 /* Measures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF040B1A098476006523C7 /* Measures.swift */; };
+		46CF04141A098476006523C7 /* Mix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF040C1A098476006523C7 /* Mix.swift */; };
+		46CF04151A098476006523C7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF040D1A098476006523C7 /* Recipe.swift */; };
+		46CF04161A098476006523C7 /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF040E1A098476006523C7 /* Rest.swift */; };
+		46CF04181A098497006523C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04171A098497006523C7 /* AppDelegate.swift */; };
+		46CF041E1A0984D6006523C7 /* BakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04191A0984D6006523C7 /* BakeTableViewCell.swift */; };
+		46CF041F1A0984D6006523C7 /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF041A1A0984D6006523C7 /* RecipesListViewController.swift */; };
+		46CF04201A0984D6006523C7 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF041B1A0984D6006523C7 /* RecipeTableViewCell.swift */; };
+		46CF04211A0984D6006523C7 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF041C1A0984D6006523C7 /* RecipeViewController.swift */; };
+		46CF04221A0984D6006523C7 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF041D1A0984D6006523C7 /* SidePanelViewController.swift */; };
+		46CF04251A0984F7006523C7 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04231A0984F7006523C7 /* CenterViewController.swift */; };
+		46CF04261A0984F7006523C7 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04241A0984F7006523C7 /* ContainerViewController.swift */; };
+		46CF04291A098560006523C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CF04271A098560006523C7 /* Main.storyboard */; };
+		46F45EFE1A08EFE70005E775 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F45EFD1A08EFE70005E775 /* Images.xcassets */; };
+		46F45F011A08EFE70005E775 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F45EFF1A08EFE70005E775 /* LaunchScreen.xib */; };
+		46F45F0D1A08EFE80005E775 /* BrodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F45F0C1A08EFE80005E775 /* BrodTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46F45F071A08EFE80005E775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F45EE91A08EFE70005E775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46F45EF01A08EFE70005E775;
+			remoteInfo = Brod;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		46CF04071A098476006523C7 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		46CF04081A098476006523C7 /* Bake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bake.swift; sourceTree = "<group>"; };
+		46CF04091A098476006523C7 /* Fold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fold.swift; sourceTree = "<group>"; };
+		46CF040A1A098476006523C7 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		46CF040B1A098476006523C7 /* Measures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measures.swift; sourceTree = "<group>"; };
+		46CF040C1A098476006523C7 /* Mix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mix.swift; sourceTree = "<group>"; };
+		46CF040D1A098476006523C7 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		46CF040E1A098476006523C7 /* Rest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
+		46CF04171A098497006523C7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46CF04191A0984D6006523C7 /* BakeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BakeTableViewCell.swift; sourceTree = "<group>"; };
+		46CF041A1A0984D6006523C7 /* RecipesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListViewController.swift; sourceTree = "<group>"; };
+		46CF041B1A0984D6006523C7 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		46CF041C1A0984D6006523C7 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		46CF041D1A0984D6006523C7 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
+		46CF04231A0984F7006523C7 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
+		46CF04241A0984F7006523C7 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		46CF04281A098560006523C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46F45EF11A08EFE70005E775 /* Brod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F45EF51A08EFE70005E775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46F45EFD1A08EFE70005E775 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		46F45F001A08EFE70005E775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		46F45F061A08EFE80005E775 /* BrodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F45F0B1A08EFE80005E775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46F45F0C1A08EFE80005E775 /* BrodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrodTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46F45EEE1A08EFE70005E775 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F45F031A08EFE80005E775 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46F45EE81A08EFE70005E775 = {
+			isa = PBXGroup;
+			children = (
+				46F45EF31A08EFE70005E775 /* Brod */,
+				46F45F091A08EFE80005E775 /* BrodTests */,
+				46F45EF21A08EFE70005E775 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46F45EF21A08EFE70005E775 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46F45EF11A08EFE70005E775 /* Brod.app */,
+				46F45F061A08EFE80005E775 /* BrodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46F45EF31A08EFE70005E775 /* Brod */ = {
+			isa = PBXGroup;
+			children = (
+				46CF04191A0984D6006523C7 /* BakeTableViewCell.swift */,
+				46CF041A1A0984D6006523C7 /* RecipesListViewController.swift */,
+				46CF04231A0984F7006523C7 /* CenterViewController.swift */,
+				46CF04241A0984F7006523C7 /* ContainerViewController.swift */,
+				46CF04271A098560006523C7 /* Main.storyboard */,
+				46CF041B1A0984D6006523C7 /* RecipeTableViewCell.swift */,
+				46CF041C1A0984D6006523C7 /* RecipeViewController.swift */,
+				46CF041D1A0984D6006523C7 /* SidePanelViewController.swift */,
+				46CF04171A098497006523C7 /* AppDelegate.swift */,
+				46F45F311A08F6F40005E775 /* Classes */,
+				46F45EFD1A08EFE70005E775 /* Images.xcassets */,
+				46F45EFF1A08EFE70005E775 /* LaunchScreen.xib */,
+				46F45EF41A08EFE70005E775 /* Supporting Files */,
+			);
+			path = Brod;
+			sourceTree = "<group>";
+		};
+		46F45EF41A08EFE70005E775 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46F45EF51A08EFE70005E775 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46F45F091A08EFE80005E775 /* BrodTests */ = {
+			isa = PBXGroup;
+			children = (
+				46F45F0C1A08EFE80005E775 /* BrodTests.swift */,
+				46F45F0A1A08EFE80005E775 /* Supporting Files */,
+			);
+			path = BrodTests;
+			sourceTree = "<group>";
+		};
+		46F45F0A1A08EFE80005E775 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46F45F0B1A08EFE80005E775 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46F45F311A08F6F40005E775 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				46CF04071A098476006523C7 /* Action.swift */,
+				46CF04081A098476006523C7 /* Bake.swift */,
+				46CF04091A098476006523C7 /* Fold.swift */,
+				46CF040A1A098476006523C7 /* Ingredient.swift */,
+				46CF040B1A098476006523C7 /* Measures.swift */,
+				46CF040C1A098476006523C7 /* Mix.swift */,
+				46CF040D1A098476006523C7 /* Recipe.swift */,
+				46CF040E1A098476006523C7 /* Rest.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46F45EF01A08EFE70005E775 /* Brod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46F45F101A08EFE80005E775 /* Build configuration list for PBXNativeTarget "Brod" */;
+			buildPhases = (
+				46F45EED1A08EFE70005E775 /* Sources */,
+				46F45EEE1A08EFE70005E775 /* Frameworks */,
+				46F45EEF1A08EFE70005E775 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brod;
+			productName = Brod;
+			productReference = 46F45EF11A08EFE70005E775 /* Brod.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46F45F051A08EFE80005E775 /* BrodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46F45F131A08EFE80005E775 /* Build configuration list for PBXNativeTarget "BrodTests" */;
+			buildPhases = (
+				46F45F021A08EFE80005E775 /* Sources */,
+				46F45F031A08EFE80005E775 /* Frameworks */,
+				46F45F041A08EFE80005E775 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46F45F081A08EFE80005E775 /* PBXTargetDependency */,
+			);
+			name = BrodTests;
+			productName = BrodTests;
+			productReference = 46F45F061A08EFE80005E775 /* BrodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46F45EE91A08EFE70005E775 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Johan Halvarsson de Maar";
+				TargetAttributes = {
+					46F45EF01A08EFE70005E775 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					46F45F051A08EFE80005E775 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 46F45EF01A08EFE70005E775;
+					};
+				};
+			};
+			buildConfigurationList = 46F45EEC1A08EFE70005E775 /* Build configuration list for PBXProject "Brod" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46F45EE81A08EFE70005E775;
+			productRefGroup = 46F45EF21A08EFE70005E775 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46F45EF01A08EFE70005E775 /* Brod */,
+				46F45F051A08EFE80005E775 /* BrodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46F45EEF1A08EFE70005E775 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46CF04291A098560006523C7 /* Main.storyboard in Resources */,
+				46F45F011A08EFE70005E775 /* LaunchScreen.xib in Resources */,
+				46F45EFE1A08EFE70005E775 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F45F041A08EFE80005E775 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46F45EED1A08EFE70005E775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46CF04211A0984D6006523C7 /* RecipeViewController.swift in Sources */,
+				46CF04161A098476006523C7 /* Rest.swift in Sources */,
+				46CF04251A0984F7006523C7 /* CenterViewController.swift in Sources */,
+				46CF04111A098476006523C7 /* Fold.swift in Sources */,
+				46CF04101A098476006523C7 /* Bake.swift in Sources */,
+				46CF04151A098476006523C7 /* Recipe.swift in Sources */,
+				46CF04141A098476006523C7 /* Mix.swift in Sources */,
+				46CF04201A0984D6006523C7 /* RecipeTableViewCell.swift in Sources */,
+				46CF040F1A098476006523C7 /* Action.swift in Sources */,
+				46CF04121A098476006523C7 /* Ingredient.swift in Sources */,
+				46CF04261A0984F7006523C7 /* ContainerViewController.swift in Sources */,
+				46CF04181A098497006523C7 /* AppDelegate.swift in Sources */,
+				46CF041E1A0984D6006523C7 /* BakeTableViewCell.swift in Sources */,
+				46CF04131A098476006523C7 /* Measures.swift in Sources */,
+				46CF04221A0984D6006523C7 /* SidePanelViewController.swift in Sources */,
+				46CF041F1A0984D6006523C7 /* RecipesListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F45F021A08EFE80005E775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F45F0D1A08EFE80005E775 /* BrodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46F45F081A08EFE80005E775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46F45EF01A08EFE70005E775 /* Brod */;
+			targetProxy = 46F45F071A08EFE80005E775 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46CF04271A098560006523C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46CF04281A098560006523C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		46F45EFF1A08EFE70005E775 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46F45F001A08EFE70005E775 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46F45F0E1A08EFE80005E775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46F45F0F1A08EFE80005E775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46F45F111A08EFE80005E775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Brod/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		46F45F121A08EFE80005E775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Brod/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		46F45F141A08EFE80005E775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BrodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brod.app/Brod";
+			};
+			name = Debug;
+		};
+		46F45F151A08EFE80005E775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BrodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brod.app/Brod";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46F45EEC1A08EFE70005E775 /* Build configuration list for PBXProject "Brod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F45F0E1A08EFE80005E775 /* Debug */,
+				46F45F0F1A08EFE80005E775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46F45F101A08EFE80005E775 /* Build configuration list for PBXNativeTarget "Brod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F45F111A08EFE80005E775 /* Debug */,
+				46F45F121A08EFE80005E775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46F45F131A08EFE80005E775 /* Build configuration list for PBXNativeTarget "BrodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F45F141A08EFE80005E775 /* Debug */,
+				46F45F151A08EFE80005E775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46F45EE91A08EFE70005E775 /* Project object */;
+}
