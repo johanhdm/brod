@@ -18,7 +18,7 @@ class CenterViewController: UIViewController, SidePanelViewControllerDelegate {
 
   // MARK: Button actions
 
-  @IBAction func kittiesTapped(sender: AnyObject) {
+  @IBAction func menuTapped(sender: AnyObject) {
     if let d = delegate {
       d.toggleLeftPanel?()
     }

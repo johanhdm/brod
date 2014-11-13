@@ -13,11 +13,11 @@ class RecipeTableViewCell: UITableViewCell {
     @IBOutlet var labelRecipeTitle : UILabel?
     @IBOutlet var backgroundImage : UIImageView?
     
-    override func awakeFromNib() {
+/*    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+*/
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -32,6 +32,5 @@ class RecipeTableViewCell: UITableViewCell {
         
     
     }
-    
-    
+        
 }

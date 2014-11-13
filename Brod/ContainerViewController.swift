@@ -10,17 +10,17 @@ import UIKit
 import QuartzCore
 
 enum SlideOutState {
-  case BothCollapsed
-  case LeftPanelExpanded
+  case Collapsed
+  case Expanded
 }
 
 class ContainerViewController: UIViewController, RecipesListViewControllerDelegate, UIGestureRecognizerDelegate {
   var centerNavigationController: UINavigationController!
   var centerViewController: RecipesListViewController!
 
-  var currentState: SlideOutState = .BothCollapsed {
+  var currentState: SlideOutState = .Collapsed {
     didSet {
-      let shouldShowShadow = currentState != .BothCollapsed
+      let shouldShowShadow = currentState != .Collapsed
       showShadowForCenterViewController(shouldShowShadow)
     }
   }
@@ -50,15 +50,24 @@ class ContainerViewController: UIViewController, RecipesListViewControllerDelega
     addChildViewController(centerNavigationController)
 
     centerNavigationController.didMoveToParentViewController(self)
-
-    let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
-    centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+    centerNavigationController.navigationBarHidden = true
+    
+    let showGestureRecognizer:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handlePanGesture:")
+    showGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Right
+    centerNavigationController.view.addGestureRecognizer(showGestureRecognizer)
+    
+    let hideGestureRecognizer:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handlePanGesture:")
+    hideGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Left
+    centerNavigationController.view.addGestureRecognizer(hideGestureRecognizer)
+    //let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
+    //centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+    
   }
 
   // MARK: CenterViewController delegate methods
 
   func toggleLeftPanel() {
-    let notAlreadyExpanded = (currentState != .LeftPanelExpanded)
+    let notAlreadyExpanded = (currentState != .Expanded)
 
     if notAlreadyExpanded {
       addLeftPanelViewController()
@@ -67,14 +76,6 @@ class ContainerViewController: UIViewController, RecipesListViewControllerDelega
     animateLeftPanel(shouldExpand: notAlreadyExpanded)
   }
 
-  func collapseSidePanels() {
-    switch (currentState) {
-    case .LeftPanelExpanded:
-      toggleLeftPanel()
-    default:
-      break
-    }
-  }
 
   func addLeftPanelViewController() {
     if (leftViewController == nil) {
@@ -97,12 +98,12 @@ class ContainerViewController: UIViewController, RecipesListViewControllerDelega
 
   func animateLeftPanel(#shouldExpand: Bool) {
     if (shouldExpand) {
-      currentState = .LeftPanelExpanded
+      currentState = .Expanded
 
       animateCenterPanelXPosition(targetPosition: CGRectGetWidth(centerNavigationController.view.frame) - centerPanelExpandedOffset)
     } else {
       animateCenterPanelXPosition(targetPosition: 0) { finished in
-        self.currentState = .BothCollapsed
+        self.currentState = .Collapsed
 
         self.leftViewController!.view.removeFromSuperview()
         self.leftViewController = nil;
@@ -127,21 +128,29 @@ class ContainerViewController: UIViewController, RecipesListViewControllerDelega
 
   // MARK: Gesture recognizer
 
-  func handlePanGesture(recognizer: UIPanGestureRecognizer) {
+  func handlePanGesture(recognizer: UISwipeGestureRecognizer) {
+    
+    if (recognizer.direction == UISwipeGestureRecognizerDirection.Right && currentState == SlideOutState.Collapsed)
+    {
+        toggleLeftPanel()
+        
+    }
+    if ( recognizer.direction == UISwipeGestureRecognizerDirection.Left && currentState == SlideOutState.Expanded)
+    {
+        toggleLeftPanel()
+    }
     // we can determine whether the user is revealing the left or right
     // panel by looking at the velocity of the gesture
-    let gestureIsDraggingFromLeftToRight = (recognizer.velocityInView(view).x > 0)
+    /*let gestureIsDraggingFromLeftToRight = (recognizer.velocityInView(view).x > 0)
 
     switch(recognizer.state) {
     case .Began:
-      if (currentState == .BothCollapsed) {
+      if (currentState == .Collapsed) {
         // If the user starts panning, and neither panel is visible
         // then show the correct panel based on the pan direction
 
         if (gestureIsDraggingFromLeftToRight) {
           addLeftPanelViewController()
-        } else {
-//          addRightPanelViewController()
         }
 
         showShadowForCenterViewController(true)
@@ -158,13 +167,9 @@ class ContainerViewController: UIViewController, RecipesListViewControllerDelega
         let hasMovedGreaterThanHalfway = recognizer.view!.center.x > view.bounds.size.width
         animateLeftPanel(shouldExpand: hasMovedGreaterThanHalfway)
       }
-/*else if (rightViewController != nil) {
-        let hasMovedGreaterThanHalfway = recognizer.view!.center.x < 0
-        animateRightPanel(shouldExpand: hasMovedGreaterThanHalfway)
-      }*/
     default:
       break
-    }
+    }*/
   }
 }
 

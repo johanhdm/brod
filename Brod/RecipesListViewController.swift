@@ -19,6 +19,7 @@ class RecipesListViewController: UITableViewController, UITableViewDataSource, U
     var delegate: RecipesListViewControllerDelegate?
     
     var recipes = [Recipe]()
+    var menuButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class RecipesListViewController: UITableViewController, UITableViewDataSource, U
         
         //tableView.registerNib(nib, forCellReuseIdentifier: "RecipeCell")
 
+        menuButton.frame = CGRectMake(8, self.view.frame.height + 10 , 40, 40)
+        menuButton.setBackgroundImage(UIImage(named: "menu_button"), forState: UIControlState.Normal)
+        menuButton.addTarget(self, action: "menuTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.navigationController?.view.addSubview(menuButton)
         
         setupRecipeData()
         
@@ -36,6 +42,7 @@ class RecipesListViewController: UITableViewController, UITableViewDataSource, U
         self.tableView.reloadData()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -68,16 +75,39 @@ class RecipesListViewController: UITableViewController, UITableViewDataSource, U
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        var index = self.tableView.indexPathForSelectedRow()
+        /*var index = self.tableView.indexPathForSelectedRow()
         var recipeController : RecipeViewController = segue.destinationViewController as RecipeViewController
         
         
         var selectedRecipe = self.recipes[0]
-        recipeController.recipe = selectedRecipe
+        recipeController.recipe = selectedRecipe*/
         
         
     }
 
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        var frame = self.menuButton.frame
+        
+        frame.origin.y = scrollView.contentOffset.y + self.tableView.frame.size.height - menuButton.frame.height
+  
+        //frame.origin.y = self.view.frame.height + 10
+        
+        println("contentOffset.y")
+        println(scrollView.contentOffset.y)
+        
+        println("self.tableView.frame.size.height")
+        println(self.tableView.frame.size.height)
+        println("menuButton.frame.height")
+        println(menuButton.frame.height)
+        
+        println("origin.y")
+        println(frame.origin.y)
+        self.menuButton.frame = frame
+    }
+    
+    func menuTapped(sender: UIButton!){
+        self.delegate?.toggleLeftPanel!()
+    }
     
     
     

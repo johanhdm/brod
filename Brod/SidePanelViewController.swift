@@ -52,8 +52,13 @@ class SidePanelViewController: UIViewController, UITableViewDataSource, UITableV
   func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
     //let selectedAnimal = animals[indexPath.row]
     //delegate?.animalSelected(NSObject())
-  }
-
+    //let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+    //var destViewController : UIViewController
+    
+    //destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController1") as UIViewController
+    
+    //containerViewController.setContentViewController(destViewController)
+    }
 }
 
 class MenuCell: UITableViewCell {
