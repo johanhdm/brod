@@ -116,6 +116,9 @@
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="Foz-gh-IDc" kind="show" id="AO7-fn-gK6"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -172,11 +175,45 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BakeCell" rowHeight="200" id="TWF-R6-YcZ" customClass="BakeTableViewCell" customModule="Brod" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="BakeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="BakeCell" rowHeight="250" id="TWF-R6-YcZ" customClass="BakeTableViewCell" customModule="Brod" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TWF-R6-YcZ" id="sPU-Xl-aKV">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-7s-w7f">
+                                            <rect key="frame" x="-84" y="-15" width="600" height="199.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Degrees" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsY-P0-846">
+                                            <rect key="frame" x="218" y="80" width="165" height="38.5"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwC-V6-zLL">
+                                            <rect key="frame" x="262" y="126" width="77" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLightItalic" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aTE-7s-w7f" firstAttribute="leading" secondItem="sPU-Xl-aKV" secondAttribute="leadingMargin" constant="-8" id="5ZT-XO-tDI"/>
+                                        <constraint firstItem="NsY-P0-846" firstAttribute="top" secondItem="sPU-Xl-aKV" secondAttribute="topMargin" constant="72" id="6Lt-ia-oRu"/>
+                                        <constraint firstItem="aTE-7s-w7f" firstAttribute="top" secondItem="sPU-Xl-aKV" secondAttribute="topMargin" constant="-8" id="9dE-Lh-jEH"/>
+                                        <constraint firstItem="gwC-V6-zLL" firstAttribute="leading" secondItem="sPU-Xl-aKV" secondAttribute="leadingMargin" constant="254" id="Vws-R1-GZT"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NsY-P0-846" secondAttribute="trailing" constant="209" id="ZIR-Us-JGK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gwC-V6-zLL" secondAttribute="trailing" constant="253" id="Zdg-dU-dFV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="aTE-7s-w7f" secondAttribute="bottom" constant="-8" id="cS2-dH-DjX"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="aTE-7s-w7f" secondAttribute="trailing" constant="-8" id="mBT-8w-r3v"/>
+                                        <constraint firstItem="gwC-V6-zLL" firstAttribute="top" secondItem="sPU-Xl-aKV" secondAttribute="topMargin" constant="118" id="tag-2P-OQU"/>
+                                        <constraint firstItem="NsY-P0-846" firstAttribute="leading" secondItem="sPU-Xl-aKV" secondAttribute="leadingMargin" constant="210" id="uxb-hx-vBi"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="backgroundImage" destination="aTE-7s-w7f" id="77d-cy-LB4"/>
+                                    <outlet property="degreesLabel" destination="NsY-P0-846" id="fOs-Gi-R7e"/>
+                                    <outlet property="timeLabel" destination="gwC-V6-zLL" id="T3c-CS-MH5"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MixCell" rowHeight="200" id="UDf-2Z-9x0">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -204,7 +241,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpP-3E-lfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949" y="395"/>
+            <point key="canvasLocation" x="1848" y="382.75"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="1cp-3k-CZK">

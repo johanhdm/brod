@@ -11,11 +11,15 @@ import UIKit
 class BakeTableViewCell: UITableViewCell {
 
     @IBOutlet var backgroundImage : UIImageView!
-    @IBOutlet var titleLabel : UILabel!
+    @IBOutlet var degreesLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var commentLabel: UILabel!
     
-    func loadItem(#title: String, image: String) {
-        backgroundImage.image = UIImage(named: image)
-        titleLabel.text = title
+    func loadItem(#title: String, action: Bake) {
+        backgroundImage.image = UIImage(named: "baguette")
+        degreesLabel.text =  String(action.degreesCelcius) + "°"
+        timeLabel.text = String(action.durationMinutes) + "m"
+        
     }
     
     /*override func awakeFromNib() {

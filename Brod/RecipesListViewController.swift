@@ -75,12 +75,12 @@ class RecipesListViewController: UITableViewController, UITableViewDataSource, U
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        /*var index = self.tableView.indexPathForSelectedRow()
+        var index = self.tableView.indexPathForSelectedRow()
         var recipeController : RecipeViewController = segue.destinationViewController as RecipeViewController
         
         
         var selectedRecipe = self.recipes[0]
-        recipeController.recipe = selectedRecipe*/
+        recipeController.recipe = selectedRecipe
         
         
     }

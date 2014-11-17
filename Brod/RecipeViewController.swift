@@ -17,9 +17,9 @@ class RecipeViewController: UITableViewController, UITableViewDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var nib = UINib(nibName: "BakeTableViewCell", bundle: nil)
+        //var nib = UINib(nibName: "BakeTableViewCell", bundle: nil)
         
-        tableView.registerNib(nib, forCellReuseIdentifier: "BakeCell")
+        //tableView.registerNib(nib, forCellReuseIdentifier: "BakeCell")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -60,7 +60,7 @@ class RecipeViewController: UITableViewController, UITableViewDelegate  {
             
             cell = tableView.dequeueReusableCellWithIdentifier("BakeCell", forIndexPath: indexPath) as BakeTableViewCell
         
-            cell.loadItem(title: String(action.durationMinutes), image: "baguette")
+            cell.loadItem(title: "bake", action:  action as Bake)
             
             return cell
 
