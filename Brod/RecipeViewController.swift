@@ -68,29 +68,37 @@ class RecipeViewController: UITableViewController, UITableViewDelegate  {
         else if (action is Mix)
         {
             
-            var cell : UITableViewCell
+            var cell : MixTableViewCell
             
-            cell = tableView.dequeueReusableCellWithIdentifier("MixCell", forIndexPath: indexPath) as UITableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("MixCell", forIndexPath: indexPath) as MixTableViewCell
             
-            //cell.loadItem(title: "Blanda", image: "mjol")
+            cell.loadItem(title: "Mix", action: action as Mix)
             
             return cell
         
+        }
+        else if (action is Fold){
+            var cell : FoldTableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("FoldCell", forIndexPath: indexPath) as FoldTableViewCell
+            
+            return cell
+            
+        }
+        else if (action is Rest){
+
+            var cell : RestTableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("RestCell", forIndexPath: indexPath) as RestTableViewCell
+            
+            //cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            
+            
+            return cell
+
+
         }
         else{
-
-            var cell : UITableViewCell
-            cell = tableView.dequeueReusableCellWithIdentifier("MixCell", forIndexPath: indexPath) as UITableViewCell
-            
-            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-            
-            
-            return cell
-
-
+            return UITableViewCell()
         }
-        
-        
         
     }
 

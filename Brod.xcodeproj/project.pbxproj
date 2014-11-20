@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4633C8E21A1E08550061993D /* MixView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4633C8E11A1E08550061993D /* MixView.xib */; };
+		4633C8E41A1E08B70061993D /* FoldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4633C8E31A1E08B70061993D /* FoldTableViewCell.swift */; };
+		4633C8E61A1E0B130061993D /* RestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4633C8E51A1E0B130061993D /* RestTableViewCell.swift */; };
+		468F23011A1D465600AA1803 /* MixTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F23001A1D465600AA1803 /* MixTableViewCell.swift */; };
 		46CF040F1A098476006523C7 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04071A098476006523C7 /* Action.swift */; };
 		46CF04101A098476006523C7 /* Bake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04081A098476006523C7 /* Bake.swift */; };
 		46CF04111A098476006523C7 /* Fold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF04091A098476006523C7 /* Fold.swift */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4633C8E11A1E08550061993D /* MixView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MixView.xib; sourceTree = "<group>"; };
+		4633C8E31A1E08B70061993D /* FoldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldTableViewCell.swift; sourceTree = "<group>"; };
+		4633C8E51A1E0B130061993D /* RestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestTableViewCell.swift; sourceTree = "<group>"; };
+		468F23001A1D465600AA1803 /* MixTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixTableViewCell.swift; sourceTree = "<group>"; };
 		46CF04071A098476006523C7 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		46CF04081A098476006523C7 /* Bake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bake.swift; sourceTree = "<group>"; };
 		46CF04091A098476006523C7 /* Fold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fold.swift; sourceTree = "<group>"; };
@@ -86,6 +94,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		468F23021A1D466500AA1803 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				468F23001A1D465600AA1803 /* MixTableViewCell.swift */,
+				46CF04191A0984D6006523C7 /* BakeTableViewCell.swift */,
+				4633C8E31A1E08B70061993D /* FoldTableViewCell.swift */,
+				4633C8E51A1E0B130061993D /* RestTableViewCell.swift */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
 		46F45EE81A08EFE70005E775 = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +127,7 @@
 		46F45EF31A08EFE70005E775 /* Brod */ = {
 			isa = PBXGroup;
 			children = (
-				46CF04191A0984D6006523C7 /* BakeTableViewCell.swift */,
+				468F23021A1D466500AA1803 /* Table View Cells */,
 				46CF041A1A0984D6006523C7 /* RecipesListViewController.swift */,
 				46CF04231A0984F7006523C7 /* CenterViewController.swift */,
 				46CF04241A0984F7006523C7 /* ContainerViewController.swift */,
@@ -121,6 +140,7 @@
 				46F45EFD1A08EFE70005E775 /* Images.xcassets */,
 				46F45EFF1A08EFE70005E775 /* LaunchScreen.xib */,
 				46F45EF41A08EFE70005E775 /* Supporting Files */,
+				4633C8E11A1E08550061993D /* MixView.xib */,
 			);
 			path = Brod;
 			sourceTree = "<group>";
@@ -246,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CF04291A098560006523C7 /* Main.storyboard in Resources */,
+				4633C8E21A1E08550061993D /* MixView.xib in Resources */,
 				46CF042B1A0A4A3F006523C7 /* Default-568h@2x.png in Resources */,
 				46F45F011A08EFE70005E775 /* LaunchScreen.xib in Resources */,
 				46F45EFE1A08EFE70005E775 /* Images.xcassets in Resources */,
@@ -268,6 +289,7 @@
 			files = (
 				46CF04211A0984D6006523C7 /* RecipeViewController.swift in Sources */,
 				46CF04161A098476006523C7 /* Rest.swift in Sources */,
+				4633C8E41A1E08B70061993D /* FoldTableViewCell.swift in Sources */,
 				46CF04251A0984F7006523C7 /* CenterViewController.swift in Sources */,
 				46CF04111A098476006523C7 /* Fold.swift in Sources */,
 				46CF04101A098476006523C7 /* Bake.swift in Sources */,
@@ -275,10 +297,12 @@
 				46CF04141A098476006523C7 /* Mix.swift in Sources */,
 				46CF04201A0984D6006523C7 /* RecipeTableViewCell.swift in Sources */,
 				46CF040F1A098476006523C7 /* Action.swift in Sources */,
+				4633C8E61A1E0B130061993D /* RestTableViewCell.swift in Sources */,
 				46CF04121A098476006523C7 /* Ingredient.swift in Sources */,
 				46CF04261A0984F7006523C7 /* ContainerViewController.swift in Sources */,
 				46CF04181A098497006523C7 /* AppDelegate.swift in Sources */,
 				46CF041E1A0984D6006523C7 /* BakeTableViewCell.swift in Sources */,
+				468F23011A1D465600AA1803 /* MixTableViewCell.swift in Sources */,
 				46CF04131A098476006523C7 /* Measures.swift in Sources */,
 				46CF04221A0984D6006523C7 /* SidePanelViewController.swift in Sources */,
 				46CF041F1A0984D6006523C7 /* RecipesListViewController.swift in Sources */,
